@@ -6,72 +6,117 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>nintendo</title>
   <link rel="stylesheet" href="./style/reset.css">
-  <link rel="stylesheet" href="./style/main.css">
+  <link rel="stylesheet" href="./style/common.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
   <header>
     <div class="head">
       <div class="logo">
-        <h1>nintendo 닌텐도<img src="./images/logo_nintendo_red.gif" alt=""></h1>
+        <h1>nintendo 닌텐도
+          <a href="./index.html">
+            <img src="./images/logo_nintendo_red.gif" alt="">
+          </a>
+        </h1>
       </div>
+      <input type="checkbox" id="menu">
+      <label for="menu">
+        <div class="btn-lnb">
+          <img src="./images/btn_gnb_m.png" alt="">
+        </div>
+      </label>
       <div class="lnb">
         <ul>
           <li>
             <a href="#">Nintendo Switch</a>
-            <ul class="subMenu">
-              <li><a href="#">Nintendo Switch OLED 모델</a></li>
-              <li><a href="#">Nintendo Switch</a></li>
-              <li><a href="#">Nintendo Switch Lite</a></li>
-              <li><a href="#">기능ㆍ특징을 비교</a></li>
-              <li><a href="#">주변기기</a></li>
-              <li><a href="#">Nintendo Switch Online</a></li>
-              <li><a href="#">Nintendo 지킴이 Switch <sup>TM</sup></a></li>
-              <li><a href="#">닌텐도 e숍</a></li>
-            </ul>
+            <div class="menubox menubox1">
+              <ul class="subMenu subMenu1">
+                <li><a href="#">Nintendo Switch OLED 모델</a></li>
+                <li><a href="#">Nintendo Switch</a></li>
+                <li><a href="#">Nintendo Switch Lite</a></li>
+                <li><a href="#">기능ㆍ특징을 비교</a></li>
+                <li><a href="#">주변기기</a></li>
+                <li><a href="#">Nintendo Switch Online</a></li>
+                <li><a href="#">Nintendo 지킴이 Switch <sup>TM</sup></a></li>
+                <li><a href="#">닌텐도 e숍</a></li>
+              </ul>
+            </div>
           </li>
           <li>
             <a href="#">소프트웨어</a>
-            <ul class="subMenu">
-              <li><a href="#">닌텐도 e숍</a></li>
-              <li><a href="#">닌텐도 3DS 소프트웨어</a></li>
-              <li><a href="#">발매 예정 소프트웨어</a></li>
-              <li><a href="#">스마트폰용 앱</a></li>
-            </ul>
+            <div class="menubox menubox2">
+              <ul class="subMenu subMenu2">
+                <li><a href="#">닌텐도 e숍</a></li>
+                <li><a href="#">닌텐도 3DS 소프트웨어</a></li>
+                <li><a href="#">발매 예정 소프트웨어</a></li>
+                <li><a href="#">스마트폰용 앱</a></li>
+              </ul>
+            </div>
           </li>
           <li>
             <a href="#">캐릭터</a>
-            <ul class="subMenu">
-              <li><a href="#">스플래툰 베이스 홈페이지</a></li>
-              <li><a href="#">별의 커비 공식 홈페이지</a></li>
-            </ul>
+            <div class="menubox menubox3">
+              <ul class="subMenu subMenu3">
+                <li><a href="#">스플래툰 베이스 홈페이지</a></li>
+                <li><a href="#">별의 커비 공식 홈페이지</a></li>
+              </ul>
+            </div>
           </li>
           <li>
             <a href="#">고객지원</a>
-            <ul class="subMenu">
-              <li><a href="#">Nintendo Switch 고객지원</a></li>
-              <li><a href="#">Nintendo Switch Online 서포트</a></li>
-              <li><a href="#">닌텐도 3DS 고객지원</a></li>
-              <li><a href="#">고객지원 홈페이지</a></li>
-              <li><a href="#">네트워크 장애 발생 상황</a></li>
-            </ul>
+            <div class="menubox menubox4">
+              <ul class="subMenu subMenu4">
+                <li><a href="#">Nintendo Switch 고객지원</a></li>
+                <li><a href="#">Nintendo Switch Online 서포트</a></li>
+                <li><a href="#">닌텐도 3DS 고객지원</a></li>
+                <li><a href="#">고객지원 홈페이지</a></li>
+                <li><a href="#">네트워크 장애 발생 상황</a></li>
+              </ul>
+            </div>
           </li>
           <li>
             <a href="#">News</a>
-            <ul class="subMenu">
-              <li><a href="#">News</a></li>
-              <li><a href="#">보도자료</a></li>
-              <li><a href="#">알림</a></li>
-              <li><a href="#">이벤트</a></li>
-            </ul>
+            <div class="menubox menubox5">
+              <ul class="subMenu subMenu5">
+                <li><a href="#">News</a></li>
+                <li><a href="#">보도자료</a></li>
+                <li><a href="#">알림</a></li>
+                <li><a href="#">이벤트</a></li>
+              </ul>
+            </div>
           </li>
         </ul>
       </div>
-      <div class="gnb">
-        <ul>
-          <li><a href="#">구입</a></li>
-          <li><a href="#">검색</a></li>
-        </ul>
-      </div>
+    </div>
+    <div class="gnb">
+      <ul>
+        <li>
+          <a href="#">
+            <img src="./images/btn_head_eshop.gif" alt="">
+            <img src="./images/btn_head_eshop_m.png" alt="">
+          </a>
+        </li>
+        <li>
+          <input type="checkbox" id="search">
+          <label for="search">
+            <div class="s-box">
+              <img src="./images/search.png" alt="">
+            </div>
+          </label>
+          <div class="search">
+            <div class="searchbox">
+              <input type="text" placeholder="키워드를 입력해주세요.">
+              <button>검색</button>
+            </div>
+            <div class="search-close">
+              <label for="search">
+                <img src="./images/ico_close_searchBox.gif" alt="">
+                <p>검색 닫기</p>
+              </label>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
   </header>
   <section>
