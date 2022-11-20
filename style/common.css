@@ -40,7 +40,7 @@ h1 {
   height: 100%;
   display: block;
   text-align: center;
-  line-height: 70px;
+  padding-top: 25px;
 }
 sup {
   font-size: 10px;
@@ -212,6 +212,7 @@ a:hover {
 .gnb>ul>li>a>img:nth-child(2) {
   display: none;
 }
+/* 반응형 */
 @media screen and (max-width:1220px) {
   .gnb li:nth-child(2)>label {
     border: none;
@@ -274,10 +275,17 @@ a:hover {
     bottom: -4px;
   }
   .lnb {
-    display: none;
+    position: relative;
+    /* display: none; */
+    height: 0px;
+    transition: .6s;
+    width: 100vw;
+    overflow: hidden;
   }
   #menu:checked ~ .lnb {
     display: block;
+    height: auto;
+    /* height: 580px; */
   }
   .btn-lnb {
     position: absolute;
@@ -290,5 +298,69 @@ a:hover {
     width: 30px;
     position: absolute;
     top: 17px;
+  }
+  .lnb {
+    position: absolute;
+    top: 60px;
+  }
+  .lnb>ul>li {
+    width: 100vw;
+    background-color: #fff;
+  }
+  .lnb>ul>li>a {
+    position: relative;
+    display: block;
+    width: 100vw;
+    height: 52px;
+    padding: 15px 20px;
+    font-weight: 700;
+    text-align: left;
+    letter-spacing: -0.05em;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.491);
+  }
+  .lnb>ul>li>a:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    right: 20px;
+    background: url(../images/ico_gnb_fold.png) no-repeat left top;
+    background-size: 25px 50px;
+  }
+  .subMenu li {
+    height: 30px;
+  }
+  .subMenu li>a {
+    font-size: 16px;
+  }
+  .lnb>ul>li:hover .menubox1 {
+    height: 320px;
+  }
+  .lnb>ul>li:hover .subMenu1 {
+    height: 320px;
+    padding: 20px 0;
+  }
+  .subMenu>li {
+    margin: 5px;
+  }
+  .lnb>ul>li:hover>a:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    right: 20px;
+    background: url(../images/ico_gnb_fold.png) no-repeat left top -25px;
+    background-size: 25px 50px;
+  }
+  .search{
+    top: 60px;
+  }
+  .searchbox{
+    width: 100vw;
+  }
+  .searchbox>input {
+    width: calc(100% - 100px);
   }
 }
