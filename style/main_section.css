@@ -1,0 +1,240 @@
+/* banner 이미지 및 카운트 */
+.banner {
+  height: auto;
+  display: block;
+}
+.bannerimg {
+  width: 100%;
+  position: relative;
+  display: flex;
+  z-index: -9;
+  height: auto;
+}
+.bannerimg > img{
+  position: absolute;
+  width: 100%;
+  animation: rolling 40s infinite;
+}
+.bannerimg > img:nth-child(2n) {
+  display: none;
+}
+.bannerimg>img:nth-child(17){
+  position: static;
+  background-color: #fff;
+  opacity: 0;
+}
+.bannerimg>img:nth-child(15){
+  right: -100%;
+  animation-delay: 35s;
+}
+.bannerimg>img:nth-child(13){
+  right: -100%;
+  animation-delay: 30s;
+}
+.bannerimg>img:nth-child(11){
+  right: -100%;
+  animation-delay: 25s;
+}
+.bannerimg>img:nth-child(9){
+  right: -100%;
+  animation-delay: 20s;
+}
+.bannerimg>img:nth-child(7){
+  right: -100%;
+  animation-delay: 15s;
+}
+.bannerimg>img:nth-child(5){
+  right: -100%;
+  animation-delay: 10s;
+}
+.bannerimg>img:nth-child(3){
+  right: -100%;
+  animation-delay: 5s;
+}
+.bannerimg>img:nth-child(1){
+  right: 0;
+}
+.arrow {
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  left: 0;  
+  /* background-color: antiquewhite; */
+  bottom: -40px;
+  display: inline-block;
+}
+.left {
+  width: 40px;
+  height: 30px;
+  overflow: hidden;
+  position: absolute;
+  left: 43%;
+
+}
+.right {
+  width: 40px;
+  height: 30px;
+  overflow: hidden;
+  position: absolute;
+  right: 43%;
+}
+.left > img {
+  width: 40px;
+  position: absolute;
+  left: 20px;
+}
+.right > img {
+  width: 40px;
+  position: absolute;
+  right: 20px;
+}
+.count {
+  display: flex;
+  position: absolute;
+  width: 40px;
+  margin: auto;
+  left: calc(50% - 17px);
+  font-size: 20px;
+  font-weight: 700;
+  padding-top: 5px;
+}
+.slash {
+  margin-left: 9px;
+}
+.countright {
+  margin-left: 5px;
+}
+.countleft {
+  float: left;
+  margin-right: 5px;
+}
+.cleft {
+  position: absolute;
+  animation: rollingcount 40s infinite ;
+}
+.cleft:nth-child(1){
+  opacity: 0;
+}
+.cleft:nth-child(2){
+  opacity: 0;
+  animation-delay: 5s;
+}
+.cleft:nth-child(3){
+  opacity: 0;
+  animation-delay: 10s;
+}
+.cleft:nth-child(4){
+  opacity: 0;
+  animation-delay: 15s;
+}
+.cleft:nth-child(5){
+  opacity: 0;
+  animation-delay: 20s;
+}
+.cleft:nth-child(6){
+  opacity: 0;
+  animation-delay: 25s;
+}
+.cleft:nth-child(7){
+  opacity: 0;
+  animation-delay: 30s;
+}
+.cleft:nth-child(8){
+  opacity: 0;
+  animation-delay: 35s;
+}
+@keyframes rolling {
+  0% {right: -100%;}
+  3% {right: 0;}
+  12.5% {right: 0;}
+  15.5% {right: 100%;}
+  100% {right: 100%;}
+}
+@keyframes rollingcount {
+  0% {opacity: 0;}
+  0.00001% {opacity: 1;}
+  12.5% {opacity: 1;}
+  12.500001% {opacity: 0;}
+  100% {opacity: 0;}
+}
+
+/* section */
+article {
+  width: 1200px;
+  height: 500px;
+  background-color: antiquewhite;
+  margin: auto;
+  margin-top: 50px;
+}
+
+/* footer */
+footer {
+  width: 1200px;
+  height: 200px;
+  margin: auto;
+  background-color: black;
+}
+/* 반응형 */
+@media screen and (max-width:1200px) {
+ article{
+  width: 96.5%;
+ } 
+}
+@media screen and (max-width:1024px) {
+  .left {
+    left: 0;
+  }
+  .right {
+    right: 0;
+  }
+}
+@media screen and (max-width:767px) {
+  .bannerimg > img:nth-child(2n+1) {
+    display: none;
+  }
+  .bannerimg > img:nth-child(2n) {
+    display: block;
+  }
+  .bannerimg>img:nth-child(18){
+    position: static;
+    background-color: #fff;
+    opacity: 0;
+  }
+  .bannerimg>img:nth-child(16){
+    right: -100%;
+    animation-delay: 35s;
+  }
+  .bannerimg>img:nth-child(14){
+    right: -100%;
+    animation-delay: 30s;
+  }
+  .bannerimg>img:nth-child(12){
+    right: -100%;
+    animation-delay: 25s;
+  }
+  .bannerimg>img:nth-child(10){
+    right: -100%;
+    animation-delay: 20s;
+  }
+  .bannerimg>img:nth-child(8){
+    right: -100%;
+    animation-delay: 15s;
+  }
+  .bannerimg>img:nth-child(6){
+    right: -100%;
+    animation-delay: 10s;
+  }
+  .bannerimg>img:nth-child(4){
+    right: -100%;
+    animation-delay: 5s;
+  }
+  .bannerimg>img:nth-child(2){
+    right: 0;
+  }
+  .arrow {
+    display: none;
+  }
+  article {
+    margin-top: 20px;
+  }
+}
