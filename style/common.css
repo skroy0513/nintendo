@@ -1,6 +1,6 @@
 body {
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 header {
   width: 100%;
@@ -69,13 +69,14 @@ a:hover {
   height: 40px;
   display: flex;
   align-items: center;
-  padding: 11px 10px 11px 30px;
+  padding: 15px 10px 15px 30px;
 }
 .subMenu a{
   display: block;
   font-size: 15px;
   text-align: left;
   letter-spacing: -0.08em;
+  word-break: keep-all;
 }
 .subMenu {
   height: 0px;

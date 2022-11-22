@@ -1,7 +1,15 @@
 /* banner 이미지 및 카운트 */
+section {
+  position: relative;
+  z-index: -3;
+}
+body {
+  overflow-x: hidden;
+}
 .banner {
   height: auto;
   display: block;
+  overflow: hidden;
 }
 .bannerimg {
   width: 100%;
@@ -158,15 +166,6 @@
   100% {opacity: 0;}
 }
 
-/* section */
-article {
-  width: 1200px;
-  height: 500px;
-  background-color: antiquewhite;
-  margin: auto;
-  margin-top: 50px;
-}
-
 /* footer */
 footer {
   width: 1200px;
@@ -174,18 +173,15 @@ footer {
   margin: auto;
   background-color: black;
 }
+
 /* 반응형 */
-@media screen and (max-width:1200px) {
- article{
-  width: 96.5%;
- } 
-}
+
 @media screen and (max-width:1024px) {
   .left {
-    left: 0;
+    left: 10px;
   }
   .right {
-    right: 0;
+    right: 10px;
   }
 }
 @media screen and (max-width:767px) {
@@ -233,8 +229,5 @@ footer {
   }
   .arrow {
     display: none;
-  }
-  article {
-    margin-top: 20px;
   }
 }
