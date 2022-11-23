@@ -210,6 +210,35 @@ article {
   left: 0;
 }
 
+/* shortcut */
+.shortcut {
+  width: 100%;
+  display: flex;
+  gap: 35px;
+  margin-top: 100px;
+  flex-wrap: wrap;
+}
+.sc-img {
+  width: calc((100% - (35px * 2)) / 3);
+}
+.sc-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.sc-img img:nth-child(2n) {
+  display: none;
+}
+
+/* download */
+.download {
+  margin-top: 80px;
+}
+.download .dw-title {
+  text-align: center;
+  letter-spacing: -0.07em;
+}
+
 /* 반응형 */
 @media screen and (max-width:1200px) {
   article{
@@ -249,6 +278,17 @@ article {
   .release {
     display: none;
   }
+  .shortcut {
+    width: 100%;
+    display: flex;
+    gap: 4%;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+  .sc-img {
+    width: calc((100% - (4% * 2)) / 3);
+    margin-bottom: 35px;
+  }
  }
 
 @media screen and (max-width: 1024px){
@@ -285,12 +325,83 @@ article {
     font-size: 22px;
   }
 }
-
+@media screen and (max-width:782px) {
+  .sw-contents {
+    width: 100vw;
+    display: flex;
+    height: auto;
+    position: relative;
+    padding-top: 57%;
+  }
+  .sw-item {
+    width: 83%;
+    height: 180%;
+    position: absolute;
+  }
+  .sw-item:nth-child(1) {
+    top: 0px;
+    left: 4%;
+  }
+  .sw-item:nth-child(2) {
+    top: 0px;
+    left: 90%;
+  }
+  .sw-item:nth-child(3) {
+    top: 0px;
+    left: 100%;
+  }
+  .sw-item:nth-child(4) {
+    top: 0px;
+    left: 100%;
+  }
+  .sw-item:nth-child(5) {
+    top: 0px;
+    left: 100%;
+  }
+  .sw-item:nth-child(6) {
+    top: 0px;
+    left: 100%;
+  }
+  .sw-item:nth-child(7) {
+    top: 0px;
+    left: 100%;
+  }
+  .sw-item:nth-child(8) {
+    top: 0px;
+    left: -81%;
+  }
+  .sw-item > span,.sw-item >.sw-ex,.sw-item >.tit,.sw-item >.release,.sw-item >.sw-lang {
+    display:none;
+  }
+}
 @media screen and (max-width:767px) {
   article {
     width: 94.3%;
   }
   .news {
-    padding-top: 36px;
+    padding-top: 35px;
+  }
+  .news-title h2 {
+    font-size: 21.5px;
+  }
+  .news-contents {
+    margin-top: 20px;
+  }
+  .news-item {
+    width: calc((100% - (20px)) / 2);
+  }
+  .news-item .news-img {
+    height: 65%;
+  }
+  .sc-img img:nth-child(2n+1) {
+    display: none;
+  }
+  .sc-img img:nth-child(2n) {
+    display: block;
+  }
+  .sc-img {
+    width: 100%;
+    height: 20%;
+    margin-bottom: 10px;
   }
 }
