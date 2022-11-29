@@ -28,7 +28,6 @@ body {
 }
 .bannerimg>img:nth-child(17){
   position: static;
-  background-color: #fff;
   opacity: 0;
 }
 .bannerimg>img:nth-child(15){
