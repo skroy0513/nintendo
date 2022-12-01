@@ -283,6 +283,16 @@ a:nth-child(3) .shop>img {
   left: 5px;
 }
 
+/* notice */
+.notice {
+  margin: auto;
+  margin-top: 50px;
+  width: 1200px;
+  height: 63px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+}
+
 /* 반응형 */
 @media screen and (max-width:1220px) {
   .shortcut {
