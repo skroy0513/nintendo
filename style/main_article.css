@@ -291,9 +291,121 @@ a:nth-child(3) .shop>img {
   height: 63px;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.nt-title {
+  display: flex;
+}
+.nt-title h4{
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  width: 90px;
+}
+.nt-title a{
+  width: 20px;
+  height: 20px;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+  position: relative;
+}
+.nt-title img {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+.nt-contents {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+.nt-item1 {
+  margin-left: 10%;
+  position: relative;
+  color: #737373;
+}
+.nt-item2 {
+  margin-left: 30%;
+  position: relative;
+  color: #737373;
+}
+.nt-item1::before{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 6px;
+  left: -10px;
+  width: 4px;
+  height: 4px;
+  margin-right: 2px;
+  background-color: #e60012;
+  border-radius: 50%;
+}
+.nt-item2::before{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 6px;
+  left: -8px;
+  width: 4px;
+  height: 4px;
+  margin-right: 2px;
+  background-color: #e60012;
+  border-radius: 50%;
+}
+
+/* top */
+.top {
+  width: 100%;
+  height: 99px;
+  background-color: #e60012;
+  padding: 35px 0;
+}
+.top-contents {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.top-contents h1 {
+  display: block;
+  width: 190px;
+  height: 29px;
+  background-image: url(../images/top.png);
+}
+.goTop {
+  width: 25px;
+  height: 25px;
+  border: 2px solid #fff;
+  background-color: #fff;
+  border-radius: 50%;
+  background: url(../images/gotoTop.png) no-repeat 5px 6px;
+  transition: .2s;
+}
+.goTop:hover{
+  width: 70px;
+  border-radius: 20px;
+  background-color: #fff;
+  background-image: url(../images/gotoTop_over.png);
+  background-position: 50px 6px;
+}
+.goTop:hover::before {
+  content: "TOP";
+  color: #e60012;
+  display: block;
+  position: relative;
+  left: 10px;
+  top: 3px;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 /* 반응형 */
+@media screen and (max-width:1240px) {
+  
+}
 @media screen and (max-width:1220px) {
   .shortcut {
     width: 98%;
@@ -347,6 +459,29 @@ a:nth-child(3) .shop>img {
     margin-top: 5px;
     font-size: 17px;
   }
+  .notice {
+    width: 98%;
+  }
+  .top{
+    height: 47px;
+    padding: 12px 0;
+  }
+  .top-contents {
+    width: 98%;
+    position: relative;
+  }
+  .top-contents h1{
+    width: 94px;
+    height: 25px;
+    background-size: cover;
+    background-position: left -14px;
+    margin: auto;
+  }
+  .goTop{
+    position: absolute;
+    right: 0px;
+  }
+
 }
 @media screen and (max-width:1200px) {
   article{
@@ -404,6 +539,12 @@ a:nth-child(3) .shop>img {
   .download {
     width: 100%;
   }
+  .notice {
+    width: 100%;
+  }
+  .top-contents {
+    width: 96%;
+  }
 }
 
 @media screen and (max-width: 1024px){
@@ -445,6 +586,12 @@ a:nth-child(3) .shop>img {
   .dw-title {
     font-size: 14px;
     letter-spacing: -0.07em;
+  }
+  .notice {
+    margin-bottom: 30px;
+  }
+  .nt-item2 {
+    display: none;
   }
 }
 @media screen and (max-width:782px) {
@@ -498,7 +645,11 @@ a:nth-child(3) .shop>img {
 }
 @media screen and (max-width:767px) {
   article {
+    width: 100%;
+  }
+  .software {
     width: 94.3%;
+    margin: auto;
   }
   .news {
     padding-top: 35px;
@@ -515,6 +666,10 @@ a:nth-child(3) .shop>img {
   .news-item .news-img {
     height: 65%;
   }
+  .shortcut{
+    width: 94.3%;
+    margin: auto;
+  }
   .sc-img img:nth-child(2n+1) {
     display: none;
   }
@@ -529,7 +684,33 @@ a:nth-child(3) .shop>img {
   .sc-img:nth-child(4), .sc-img:nth-child(5) {
     margin-bottom: 10px;
   }
+  .download{
+    width: 94.3%;
+    margin: auto;
+  }
   .dw-title br {
     display: block;
+  }
+  .dw-title h2 {
+    margin-top: 30px;
+  }
+  .notice{
+    width: 100vw;
+    margin-bottom: 0;
+  }
+  .nt-title {
+    display: none;
+  }
+  .nt-contents {
+    margin-left: 4.2%;
+    margin-bottom: 17px;
+  }
+  .nt-item1{
+    font-size: 15px;
+    margin: 0;
+    position: absolute;
+  }
+  .top-contents {
+    width: 94.3%;
   }
 }

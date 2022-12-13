@@ -6,6 +6,8 @@
   box-sizing: border-box;
   font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
   color: #333;
+  letter-spacing: -0.07em;
+  scroll-behavior: smooth;
 }
 a, a:active, a:visited {
   text-decoration: none;
