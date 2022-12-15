@@ -403,9 +403,6 @@ a:nth-child(3) .shop>img {
 }
 
 /* 반응형 */
-@media screen and (max-width:1240px) {
-  
-}
 @media screen and (max-width:1220px) {
   .shortcut {
     width: 98%;

@@ -165,14 +165,6 @@ body {
   100% {opacity: 0;}
 }
 
-/* footer */
-footer {
-  width: 1200px;
-  height: 200px;
-  margin: auto;
-  background-color: black;
-}
-
 /* 반응형 */
 
 @media screen and (max-width:1024px) {

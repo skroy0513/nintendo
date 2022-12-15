@@ -15,7 +15,7 @@ a, a:active, a:visited {
 }
 a:hover {
   color: inherit;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 li {
   list-style-type: none;

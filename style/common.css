@@ -49,7 +49,7 @@ h1 {
 sup {
   font-size: 10px;
 }
-a:hover {
+header a:hover {
   color: red;
   text-decoration: none;
 }
