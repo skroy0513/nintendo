@@ -1,0 +1,106 @@
+footer {
+  width: 100%;
+  margin: auto;
+  padding: 30px 0;
+  background-color: #f5f5f5;
+}
+.inner {
+  margin: 0 30px;
+  font-size: 14px;
+}
+.terms {
+  color: #737373;
+}
+.terms a, .terms span{
+  margin-right: 7px;
+}
+.terms a:last-of-type{
+  font-weight: 600;
+  color: #333;
+}
+.tel {
+  float: right;
+}
+.tel span{
+  color: #737373;
+  display: block;
+  text-align: right;
+}
+.tel span:first-of-type{
+  margin-top: -13px;
+}
+.tel span:last-of-type{
+  margin-top: 15px;
+  font-size: 12px;
+}
+.tel br{
+  display: none;
+}
+address{
+  margin-top: 5px;
+  color: #737373;
+  font-style: normal;
+}
+address span{
+  display: inline-block;
+  margin-top: 10px;
+  color: #737373;
+  font-size: 14px;
+  margin-right: 15px;
+}
+
+/* 반응형 */
+@media screen and (max-width:1220px) {
+  .inner{
+    clear: right;
+  }
+  .tel{
+    float: none;
+    margin-top: 10px;
+  }
+  .tel span{
+    color: #737373;
+    display: inline;
+    text-align: left;
+    margin-right: 10px;
+    font: 14px;
+  }
+  .tel span:last-of-type{
+    font-size: 14px;
+  }
+  address{
+    margin-top: 15px;
+  }
+}
+@media screen and (max-width:767px) {
+  footer {
+    padding-top: 15px;
+  }
+  .inner{
+    margin: 5px 0px 40px 40px;
+  }
+  .terms, .tel, address{
+    font-size: 13px;
+  }
+  .tel{
+    margin-top: 15px;
+  }
+  .tel span{
+    line-height: 20px;
+  }
+  .tel span:last-of-type{
+    display: block;
+    margin-top: 10px;
+    font-size: 13px;
+  }
+  .tel br{
+    display: block;
+  }
+  address span{
+    display: inline-block;
+    margin-top: 3px;
+    color: #737373;
+    font-size: 13px;
+    margin-right: 5px;
+  }
+}

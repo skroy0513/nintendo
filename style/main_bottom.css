@@ -1,0 +1,252 @@
+.bottom {
+  width: 1200px;
+  padding: 40px 0;
+  margin: auto;
+}
+
+/* service */
+.service {
+  display: flex;
+  flex-wrap: wrap;
+}
+.sns {
+  display: flex;
+  gap: 20px;
+  margin-right: 40px;
+}
+.sns a {
+  display: block;
+  width: 60px;
+  height: 60px;
+  font-size: 0;
+}
+.sns li:nth-child(1) a{
+  background: url(../images/bottom.png) no-repeat left -160px;
+}
+.sns li:nth-child(2) a{
+  background: url(../images/bottom.png) no-repeat -70px -160px;
+}
+.sns li:nth-child(3) a{
+  background: url(../images/bottom.png) no-repeat -140px -160px;
+}
+.sns li:nth-child(4) a{
+  background: url(../images/bottom.png) no-repeat -210px -160px;
+}
+.sns li:nth-child(5) a{
+  background: url(../images/bottom.png) no-repeat -280px -160px;
+}
+.link{
+  font-size: 0;
+}
+.link a:first-child{
+  display: inline-block;
+  width: 370px;
+  height: 60px;
+  background: url(../images/bottom.png) no-repeat left top;
+}
+.link a:last-child{
+  display: inline-block;
+  width: 370px;
+  height: 60px;
+  margin-left: 20px;
+  background: url(../images/btn_footer_amiibo.png) no-repeat left top;
+}
+
+/* map */
+.map {
+  width: 100%;
+  margin: 60px auto 0 auto;
+  text-align: center;
+}
+.mainMap{
+  display: flex;
+}
+.mainMap>li{
+  display: block;
+  width: 25%;
+}
+.mainMap>li>a {
+  font-weight: bold;
+}
+.mainMap>li>a::before {
+  content: '';
+  border-top: 3px solid #e60012;
+  display: block;
+  width: 18px;
+  position: relative;
+  left: calc(50% - 9px);
+  top: -10px;
+}
+.subMap{
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 15px;
+}
+.subMap>li {
+  color: #737373;
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+/* 반응형 */
+@media screen and (max-width:1240px) {
+  .bottom {
+    width: 96%;
+  }
+  .service{
+    /* display: block; */
+    flex-direction: column;
+    align-items: center;
+  }
+  .sns {
+    margin-bottom: 20px;
+  }
+  .link a:last-child{
+    margin-left: 2px;
+  }
+}
+@media screen and (max-width:1215px) {
+  .mainMap>li>a {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .subMap{
+    height: 0;
+    overflow: hidden;
+  }
+  .subMap.opened{
+    height: auto;
+  }
+}
+@media screen and (max-width:798px) {
+  .link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .link a:first-child{
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width:767px) {
+  .bottom{
+    padding: 25px 0;
+    width: 100vw;
+  }
+  .sns {
+    display: flex;
+    gap: 15px;
+    margin-right: 0;
+  }
+  .sns a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 0;
+  }
+  .sns li:nth-child(1) a{
+    background: url(../images/bottom.png) no-repeat 0 -35px;
+    background-size: 230px 175px;
+  }
+  .sns li:nth-child(2) a{
+    background: url(../images/bottom.png) no-repeat -45px -35px;
+    background-size: 230px 175px;
+  }
+  .sns li:nth-child(3) a{
+    background: url(../images/bottom.png) no-repeat -90px -35px;
+    background-size: 230px 175px;
+  }
+  .sns li:nth-child(4) a{
+    background: url(../images/bottom.png) no-repeat -135px -35px;
+    background-size: 230px 175px;
+  }
+  .sns li:nth-child(5) a{
+    background: url(../images/bottom.png) no-repeat -180px -35px;
+    background-size: 230px 175px;
+  }
+  .link{
+    width: 100%;
+  }
+  .link a:first-child{
+    display: block;
+    width: 90%;
+    height: 40px;
+    margin: auto;
+    border: 1px solid #e60012;
+    border-radius: 5px;
+    background: url(../images/bottom.png) no-repeat#e70012 center -143px;
+    background-size: 230px 175px;
+  }
+  .link a:last-child{
+    display: inline-block;
+    width: 90%;
+    height: 40px;
+    margin: 10px auto;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    background: url(../images/btn_footer_amiibo.png) no-repeat center -35px;
+    background-size: 325px 80px;
+  }
+  .mainMap{
+    display: block;
+  }
+  .mainMap>li{
+    width: 100%;
+    height: auto;
+  }
+  .mainMap>li>a::before{
+    content: none;
+  }
+  .mainMap>li>a{
+    display: block;
+    padding-left: 20px;
+    margin: 0;
+    height: 57px;
+    text-align: left;
+    font-size: 17px;
+    line-height: 57px;
+    border-top: 1px solid #dadada;
+    position: relative;
+  }
+  .mainMap>li>a::after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    right: 35px;
+    top: 15px;
+    background: url(../images/ico_gnb_fold_bottom.png) no-repeat left top;
+    background-size: 25px 50px;
+  }
+  .mainMap>li>a.opened::after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    right: 35px;
+    top: 15px;
+    background: url(../images/ico_gnb_fold_bottom.png) no-repeat left -25px;
+    background-size: 25px 50px;
+  }
+  .mainMap>li>a:last-of-type{
+    border-bottom: 1px solid #dadada;
+  }
+  .subMap{
+    height: 0;
+    margin: 0;
+  }
+  .subMap li{
+    margin: 0 0 15px 0;
+  }
+  .subMap.opened{
+    margin-top: 0;
+    display: block;
+    background-color: #f7f7f7;
+    text-align: left;
+    padding:20px 0 10px 20px;
+    height: auto;
+  }
+}
