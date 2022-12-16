@@ -127,24 +127,38 @@
   <section>
     <div class="banner">
       <div class="bannerimg">
-        <img src="./images/banner01.jpg" alt="">
-        <img src="./images/767banner01.jpg" alt="">
-        <img src="./images/banner02.jpg" alt="">
-        <img src="./images/767banner02.jpg" alt="">
-        <img src="./images/banner03.png" alt="">
-        <img src="./images/767banner03.png" alt="">
-        <img src="./images/banner04.jpg" alt="">
-        <img src="./images/767banner04.jpg" alt="">
-        <img src="./images/banner05.jpg" alt="">
-        <img src="./images/767banner05.jpg" alt="">
-        <img src="./images/banner06.jpg" alt="">
-        <img src="./images/767banner06.jpg" alt="">
-        <img src="./images/banner07.jpg" alt="">
-        <img src="./images/767banner07.jpg" alt="">
-        <img src="./images/banner08.jpg" alt="">
-        <img src="./images/767banner08.jpg" alt="">
-        <img src="./images/banner01.jpg" alt="">
-        <img src="./images/767banner01.jpg" alt="">
+        <div class="img-box">
+          <img src="./images/banner01.jpg" alt="">
+          <img src="./images/767banner01.jpg" alt="">
+        </div>
+        <div class="img-box">
+          <img src="./images/banner02.jpg" alt="">
+          <img src="./images/767banner02.jpg" alt="">
+        </div>
+        <div class="img-box">
+          <img src="./images/banner03.png" alt="">
+          <img src="./images/767banner03.png" alt="">
+        </div>
+        <div class="img-box">
+          <img src="./images/banner04.jpg" alt="">
+          <img src="./images/767banner04.jpg" alt="">
+        </div>
+        <div class="img-box">
+          <img src="./images/banner05.jpg" alt="">
+          <img src="./images/767banner05.jpg" alt="">
+        </div>
+        <div class="img-box">
+          <img src="./images/banner06.jpg" alt="">
+          <img src="./images/767banner06.jpg" alt="">
+        </div>
+        <div class="img-box">
+          <img src="./images/banner07.jpg" alt="">
+          <img src="./images/767banner07.jpg" alt="">
+        </div>
+        <div class="img-box">
+          <img src="./images/banner08.jpg" alt="">
+          <img src="./images/767banner08.jpg" alt="">
+        </div>
       </div>
     </div>
     <div class="arrow">
@@ -618,10 +632,51 @@
   <script src="./script/jquery-ui.js"></script>
   <script src="./script/index.js"></script>
   <script>
+    function init(){
+      let imgHeight = $('.img-box').height();
+      document.querySelector('.banner').style.height = `${imgHeight}px`;
+    }
+    init();
+    $(window).on('resize',function(){
+      let imgHeight = $('.img-box').height();
+      document.querySelector('.banner').style.height = `${imgHeight}px`;
+    })
+
     // image slider
+    let count = 0;
     
-  </script>
-  <script>
+    function Next(){
+      $('.img-box').eq(count).animate({'left': '-100%'}, 600, function(){
+        $(this).css({'left' : '100%'})
+      })
+      count = (count + 1) % 8;
+      $('.img-box').eq(count).animate({'left': '0'}, 600)
+    }
+    let countnum = 0
+    function IndicatorNext(){
+      $('.cleft').eq(countnum).css({'display' : 'none'})
+      countnum = (countnum + 1) % 8;
+      $('.cleft').eq(countnum).css({'display': 'block'}, 600)
+    }
+    
+    $('.right').on('click',function(){
+      Next();
+      IndicatorNext();
+      timerToggle = true;
+    })
+    
+    let timerToggle = false;
+
+    let timer = setInterval(timerHandler, 4000);
+
+    function timerHandler(){
+      if(!timerToggle){
+        Next();
+      }else{
+        clearInterval(timer)
+      }
+    }
+
     // menu open
     $('.mainMap>li>a').on('click', function(){
 

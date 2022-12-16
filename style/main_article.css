@@ -1,12 +1,11 @@
 article {
   width: 1200px;
-  /* background-color: beige; */
   margin: auto;
+  margin-top: 60px;
 }
 
 /* news */
 .news {
-  padding-top: 107px;
   padding-bottom: 80px;
   font-size: 17px;
   letter-spacing: -0.1em;
@@ -548,11 +547,13 @@ a:nth-child(3) .shop>img {
 }
 
 @media screen and (max-width: 1024px){
+  article{
+    margin-top: 10px;
+  }
   .news > span, .news-title span, .sw-title span {
     display: none;
   }
   .news {
-    padding-top: 67px;
     padding-bottom: 15px;
     font-size: 15px;
   }
