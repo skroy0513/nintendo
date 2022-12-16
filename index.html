@@ -556,8 +556,8 @@
     <div class="map">
       <ul class="mainMap">
         <li>
-          <a class="opened">한국닌텐도</a>
-          <ul class="subMap opened">
+          <a>한국닌텐도</a>
+          <ul class="subMap">
             <li><a href="#">- 회사개요</a></li>
             <li><a href="#">- 찾아오시는 길</a></li>
           </ul>
@@ -613,5 +613,29 @@
     </div>
   </footer>
   <!-- map 열리는 이벤트 넣기 a를 클릭하면 a, subMap에 .opened 넣기 -->
+  <!-- script -->
+  <script src="./script/jquery-3.6.1.js"></script>
+  <script src="./script/jquery-ui.js"></script>
+  <script src="./script/index.js"></script>
+  <script>
+    // image slider
+    
+  </script>
+  <script>
+    // menu open
+    $('.mainMap>li>a').on('click', function(){
+
+      let subMap = $(this).next('.subMap');
+      let curHeight = subMap.height();
+      let autoHeight = subMap.css('height', 'auto').height();
+
+      if(curHeight === 0){
+        subMap.height(curHeight).animate({'height': autoHeight}, 200 )
+      }else{
+        subMap.animate({'height' : "0"}, 200)
+      }
+      $(this).toggleClass('opened');
+    })
+  </script>
 </body>
 </html>

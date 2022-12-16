@@ -112,11 +112,9 @@
     font-weight: bold;
   }
   .subMap{
+    font-size: 12px;
     height: 0;
     overflow: hidden;
-  }
-  .subMap.opened{
-    height: auto;
   }
 }
 @media screen and (max-width:798px) {
@@ -239,14 +237,18 @@
     margin: 0;
   }
   .subMap li{
-    margin: 0 0 15px 0;
+    margin: 0 0 15px 20px;
   }
-  .subMap.opened{
+  .subMap li:first-child{
+    margin-top: 20px;
+  }
+  .subMap{
+    font-size: 14px;
     margin-top: 0;
     display: block;
     background-color: #f7f7f7;
     text-align: left;
-    padding:20px 0 10px 20px;
-    height: auto;
+    padding: 0;
+    height: 0px;
   }
 }

@@ -21,7 +21,7 @@ body {
 .bannerimg > img{
   position: absolute;
   width: 100%;
-  animation: rolling 40s infinite;
+  /* animation: rolling 40s infinite; */
 }
 .bannerimg > img:nth-child(2n) {
   display: none;

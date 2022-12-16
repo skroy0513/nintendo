@@ -62,7 +62,7 @@ article {
 }
 .news-item > .tit {
   margin-top: 8px;
-  height: 66px;
+  height: 70px;
   overflow: hidden;
   text-overflow: ellipsis;
   color: #111;
@@ -404,6 +404,9 @@ a:nth-child(3) .shop>img {
 
 /* 반응형 */
 @media screen and (max-width:1220px) {
+  .news{
+    width: 98%;
+  }
   .shortcut {
     width: 98%;
     margin: auto;
@@ -604,6 +607,9 @@ a:nth-child(3) .shop>img {
     height: 180%;
     position: absolute;
   }
+  .sw-item:first-child .sw-img > img:nth-child(2){
+    display: none;
+  }
   .sw-item:nth-child(1) {
     top: 0px;
     left: 4%;
@@ -649,7 +655,10 @@ a:nth-child(3) .shop>img {
     margin: auto;
   }
   .news {
+    width: 94.3%;
+    margin: auto;
     padding-top: 35px;
+    padding-bottom: 50px;
   }
   .news-title h2 {
     font-size: 21.5px;
@@ -659,9 +668,6 @@ a:nth-child(3) .shop>img {
   }
   .news-item {
     width: calc((100% - (20px)) / 2);
-  }
-  .news-item .news-img {
-    height: 65%;
   }
   .shortcut{
     width: 94.3%;
