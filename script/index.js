@@ -18,6 +18,7 @@ function Next(){
   count = (count + 1) % 8;
   $('.img-box').css({'left' : '100%'}).eq(count).animate({'left': '0'}, 600)
 }
+
 let countnum = 0
 function IndicatorNext(){
   $('.cleft').eq(countnum).css({'display' : 'none'})
@@ -28,21 +29,19 @@ function IndicatorNext(){
 $('.right').on('click',function(){
   Next();
   IndicatorNext();
-  timerToggle = true;
+  clearInterval(timer);
+  timer = setInterval(function(){
+    Next();
+    IndicatorNext();
+  }, 6000);
 })
 
 let timerToggle = false;
 
-let timer = setInterval(timerHandler, 4000);
-
-function timerHandler(){
-  if(!timerToggle){
-    Next();
-    IndicatorNext();
-  }else{
-    clearInterval(timer)
-  }
-}
+let timer = setInterval(function(){
+  Next();
+  IndicatorNext();
+}, 6000);
 
 //이전으로 가는 애니메이션 만들기
 function Prev (){
@@ -62,7 +61,11 @@ function IndicatorPrev(){
 $('.left').on('click', function(){
   Prev();
   IndicatorPrev();
-  timerToggle = true;
+  clearInterval(timer);
+  timer = setInterval(function(){
+    Next();
+    IndicatorNext();
+  }, 6000);
 });
 
 // menu open
@@ -87,6 +90,4 @@ $('.mainMap>li').on('click', function(){
     updown.addClass('opened');
     notUpdown.removeClass('opened');
   }
-  
-  
 })
