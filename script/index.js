@@ -38,6 +38,7 @@ let timer = setInterval(timerHandler, 4000);
 function timerHandler(){
   if(!timerToggle){
     Next();
+    IndicatorNext();
   }else{
     clearInterval(timer)
   }
@@ -65,19 +66,27 @@ $('.left').on('click', function(){
 });
 
 // menu open
-$('.mainMap>li>a').on('click', function(){
+$('.mainMap>li').on('click', function(){
 
-  let subMap = $(this).next('.subMap');
+  let subMap = $(this).find('.subMap');
+  let notSubMap = $('.mainMap>li').not($(this)).find('.subMap');
+  let updown = $(this).find('a');
+  let notUpdown = $('.mainMap>li').not($(this)).find('a');
   let curHeight = subMap.height();
   let autoHeight = subMap.css('height', 'auto').height();
-
+  
   if(curHeight === 0){
-    subMap.height(curHeight).animate({'height': autoHeight}, 200, function(){
-      $(this).not($(this)).animate({'height' : "0"}, 200,);
-    })
+    subMap.height(curHeight).animate({'height': autoHeight}, 200);
+    notSubMap.animate({'height' : "0"}, 200);
   }else{
     subMap.animate({'height' : "0"}, 200)
   }
-
-  $(this).toggleClass('opened');
+  if(updown.hasClass('opened')){
+    updown.removeClass('opened')
+  }else{
+    updown.addClass('opened');
+    notUpdown.removeClass('opened');
+  }
+  
+  
 })
